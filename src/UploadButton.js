@@ -5,7 +5,8 @@ const UploadButton = function (props) {
   const selectFile = () => document.getElementById(inputFileId).click();
   const fileSelected = () => props.onFileSelected(document.getElementById(inputFileId).files);
 
-  const buttonProps = Object.assign({}, props, { type: "button", onClick: selectFile, onFileSelected: undefined });
+  const buttonProps = Object.assign({}, props, { type: "button", onClick: selectFile });
+  delete buttonProps.onFileSelected;
   const button = React.createElement("button", buttonProps);
 
   return (
