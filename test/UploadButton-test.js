@@ -7,7 +7,7 @@ test("UploadButton - renders", function (assert) {
   const uploadButton = shallow(<UploadButton />);
 
   const inputFile = uploadButton.find("input[type='file']").at(0);
-  assert.deepEqual(inputFile.prop("style"), { visibility: "hidden" });
+  assert.deepEqual(inputFile.prop("style"), { height: '0px', visibility: 'hidden', width: '0px' });
 
   const button = uploadButton.childAt(0);
   assert.equal(button.type(), "button");

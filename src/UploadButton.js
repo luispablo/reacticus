@@ -17,7 +17,7 @@ const UploadButton = function (props) {
   return (
     <span>
       {button}
-      <input type="file" style={{visibility: "hidden"}} id={inputFileId} onChange={fileSelected}/>
+      <input type="file" style={inputFileStyle} id={inputFileId} onChange={fileSelected}/>
     </span>
   );
 };
