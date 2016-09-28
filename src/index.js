@@ -1,7 +1,3 @@
-const UploadButton = require("./UploadButton");
+import UploadButton from "./UploadButton";
 
-const Reacticus = {
-  UploadButton
-};
-
-module.exports = Reacticus;
+export { UploadButton };

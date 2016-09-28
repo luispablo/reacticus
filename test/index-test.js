@@ -1,8 +1,8 @@
-const test = require("tape");
-const Reacticus = require("../src/index");
-const UploadButton = require("../src/UploadButton");
+import test from "tape";
+import UploadButtonOriginal from "../src/UploadButton"
+import { UploadButton } from "../src/index";
 
 test("index - exports", function (assert) {
-  assert.equal(Reacticus.UploadButton, UploadButton);
+  assert.equal(UploadButton, UploadButtonOriginal);
   assert.end();
 });
