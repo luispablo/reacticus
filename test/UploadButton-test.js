@@ -9,7 +9,7 @@ test("UploadButton - renders", function (assert) {
   const inputFile = uploadButton.find("input[type='file']").at(0);
   assert.deepEqual(inputFile.prop("style"), { visibility: "hidden" });
 
-  const button = uploadButton.childAt(1);
+  const button = uploadButton.childAt(0);
   assert.equal(button.type(), "button");
   assert.equal(button.prop("type"), "button");
   assert.equal(button.prop("onClick").toString(), "function selectFile() {\n    return document.getElementById(inputFileId).click();\n  }");
@@ -35,7 +35,7 @@ test("UploadButton - onFileSelected", function (assert) {
 
 test("UploadButton - render body", function (assert) {
   const uploadButton = shallow(<UploadButton><span>child text</span></UploadButton>);
-  const button = uploadButton.childAt(1);
+  const button = uploadButton.childAt(0);
   assert.equal(button.children().length, 1);
   assert.equal(button.childAt(0).type(), "span");
   assert.equal(button.text(), "child text")
